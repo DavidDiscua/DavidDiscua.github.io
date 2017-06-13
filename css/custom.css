@@ -1,0 +1,40 @@
+.dots {
+    content: "\f008";
+    font-family: FontAwesome;
+}
+
+#mainNav {
+    background: #02577a;
+}
+
+header {
+    background-color: #01303f;
+}
+
+hr.science {
+    color: #02577a;
+    padding: 0;
+    border: none;
+    border-top: solid 5px;
+    text-align: center;
+    max-width: 250px;
+    margin: 25px auto 30px;
+}
+
+hr.science:after {
+    content: "\f0c3";
+    font-family: FontAwesome;
+    display: inline-block;
+    position: relative;
+    top: -0.8em;
+    font-size: 3em;
+    padding: 0 0.25em;
+}
+
+hr.science:after {
+    color: white;
+}
+
+.rounded {
+    border-radius: 50%;
+}
