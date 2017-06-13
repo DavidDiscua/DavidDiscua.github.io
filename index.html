@@ -122,7 +122,6 @@
                     <hr class="star-light">
                 </div>
             </div>
-
             <div class="row">
                 <div class="col-lg-6 ">
                     <p align="justify">El objetivo principal de la investigación es identificar autores importantes en la comunidad científica a través del estudio de redes, utilizando teoría de grafos construyendo una metodología más, que permita evaluar la calidad de
@@ -153,16 +152,171 @@
                         <p align="justify"><strong>Material recomendado:</strong></p>
                         <ul>
                             <li>Capítulos 2,3 y 4 del libro <strong><a target="_blank" href="http://eu.wiley.com/WileyCDA/WileyTitle/productCd-0470041447.html">Analysis of Biological Networks</a></strong></li>
-                            <li>Herramineta para el anánlisis de la red <strong><a target="_blank" href="http://www.cytoscape.org/">Cytoscape</a></strong></li>
+                            <li>Herramineta para el análisis de la red <strong><a target="_blank" href="http://www.cytoscape.org/">Cytoscape</a></strong></li>
                             <li>Software para obtener la información <strong><a target="_blank" href="https://www.soapui.org/">SOAPUI</a></strong></li>
                             <li>Bases de datos de <strong><a target="_blank" href="https://www.thomsonreuters.com/en.html">Thomson Reuters</a></strong> </li>
                             <li>Servicios Web <strong><a target="_blank" href="https://www.soapui.org/soap-and-wsdl/working-with-wsdls.html">WSDL</a></strong></li>
+                            <li>Universidad de <strong><a target="_blank" href="http://www.utdallas.edu/">UTDallas</a></strong></li>
+                            <li>Redes academicas <strong><a target="_blank" href="http://aminer.org/l">ARNETMINER</a></strong></li>
+                            <li>Librería para manejo de HTML en JAVA <strong><a target="_blank" href="https://jsoup.org/">Jsoup</a></strong></li>
                         </ul>
+                        <br>
+                        <p align="justify">Se desarrollaron algoritmos para realizar tareas específicas en JAVA utlizando NetBeans como entorno de desarrollo integrado, los links de los repositorios se encuentran a continuación junto al conjunto de datos utilizados:</p>
+                        <ul>
+                            <li>Algoritmos y datos de los autores <strong><a target="_blank" href="https://github.com/DavidDiscua/XML_Builder">XMLBuilder</a></strong></li>
+                            <li>ALgoritmos para buscar en WOS mediante proxies <strong><a target="_blank" href="https://github.com/DavidDiscua/WOS_Proxy_Crawler">WOSProxyCrawler</a></strong></li>
+                            <li>Validación de datos <strong><a target="_blank" href="https://github.com/DavidDiscua/PrecisionANDRecall">PrecisionANDRecall</a></strong></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p align="justify"><strong>CONCEPTOS Y DEFINICIONES BÁSICAS</strong></p>
+                        <p align="justify">Para poder determinar la importancia de los autores en la Red de coautorías, se aplican métricas de centralidades que permiten medir la importancia que representa el autor en la red. El análisis de las centralidades se aplica a
+                            una red de coautorías la cual denota ciertas características importantes. La Ilustración 1 muestra la vista de la red de coautorías en Cytoscape.</p>
+                        <br>
+                        <center>
+                            <img class="img-responsive imgText" src="img/red.jpg" alt="Red de publicaciones">
+                            <p align="center">Ilustración 1. Vista general de la Red De Publicaciones.</p>
+                        </center>
+                        <br>
+                        <p align="justify"><strong>Centralidad en redes</strong></p>
+                        <p align="justify">Las centralidades en una red indican la importancia de los vértices dentro de la red con respecto a su posición con los demás vértices, existen distintos tipos de centralidades, por ejemplo: Cercanía, intermediación, excentricidad,
+                            grado (Junker & Schreiber, Network Centralities, 2008).</p>
+                        <br>
+                        <p align="justify"><strong>Centralidad de cercanía</strong></p>
+                        <p align="justify"> La centralidad se centra en la distancia geodésica de cada nodo en relación a todos los demás nodos en la red. La cercanía puede considerarse como una medida de cuánto tiempo tomará para que la información se propague de un determinado
+                            nodo a los otros nodos en la red (Junker & Schreiber, Closeness Centrality, 2008). La Ecuación 1 muestra cómo se calcula la centralidad de cercanía.</p>
+                        <br>
+                        <center>
+                            <img class="img-responsive imgText" src="img/ecuacion1.jpg" alt="Red de publicaciones">
+                            <br>
+                        </center>
+                        <br>
+                        <p align="justify"><strong>Centralidad de Intermediación</strong></p>
+                        <p align="justify">La centralidad de intermediación se basa en el número de caminos más cortos que pasan a través de un nodo. Los nodos con una alta intermediación juegan el papel importante de conectar a los diferentes grupos de nodos (Junker &
+                            Schreiber, Shortest Path Betweeenness Centrality, 2008). La Ecuación 2 muestra cómo se calcula la centralidad de intermediación.</p>
+                        <br>
+                        <center>
+                            <img class="img-responsive imgText" src="img/ecuacion3.jpg" alt="Red de publicaciones">
+                        </center>
+                        <br>
+                        <p align="justify"><strong>Centralidad de Grado</strong></p>
+                        <p align="justify">La centralidad de grado es igual al número de aristas que un nodo tiene con otros nodos dentro de la red (Junker & Schreiber, Degree Centrality, 2008). La Ecuación 3 muestra cómo se calcula la centralidad de grado.</p>
+                        <br>
+                        <center>
+                            <img class="img-responsive imgText" src="img/ecuacion3.jpg" alt="Red de publicaciones">
+                        </center>
+                        <br>
+                        <p align="justify"><strong>Centralidad de Bonacich</strong></p>
+                        <p align="justify">La centralidad de Bonacich fue presentada por Phillip Bonacich. Esta consiste en considerar la centralidad de grado que poseen los nodos que están directamente conectados al nodo al que se pretende calcular la centralidad. Si los
+                            nodos vecinos poseen una alta centralidad de grado, la centralidad de Bonacich resultará ser alta debido a que es la sumatoria de todas las centralidades de grado de los nodos directamente conectados. En la Ecuación 4 se muestra
+                            la fórmula para el cálculo de esta centralidad.</p>
+                        <br>
+                        <center>
+                            <img class="img-responsive imgText" src="img/ecuacion4.jpg" alt="Red de publicaciones">
+                        </center>
+                        <br>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+    <section id="metodologia">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Metodología</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p align="justify">Red De Publicaciones toma un conjunto de N publicaciones de diferentes tópicos y establece relaciones entre los autores (aquellos autores que posean colaboraciones con otros). Las relaciones y los autores se trasladan a un dato de
+                        tipo abstracto denominada Grafo (formando una red) donde cada relación representa una arista(R) y cada autor(A) representa un vértice estableciendo un grafo G = (A, R). Entre más aristas posea un autor (más colaboraciones) aumenta
+                        su grado que es un criterio importante dentro del análisis; también se consideran las centralidades de un grafo (Centralidad: indica los vértices más importantes dentro del grafo) dentro de la red. Un nodo con alta Centralidad
+                        de Intermediación, Cercanía y Grado representa una gran influencia dentro de la red, un factor importante dentro de la construcción de la red son las 3 maneras distintas en que se aborda la característica de colaboración: Una colaboración
+                        entre autores, Número de colaboración dentro del conjunto y el Número de colaboraciones internacionales dentro del conjunto, finalmente se hace un análisis con la centralidad de Bonacich.</p>
+                </div>
+                <div class="col-lg-12">
+                    <br>
+                    <p align="justify"><strong>ENFOQUE PARA EL ANÁLISIS DE LA RED DE COAUTORÍAS</strong></p>
+                    <br>
+                    <p align="justify">A diferencia de los enfoques de Índice-h y El Factor de Impacto, la Red De Publicaciones se enfoca en considerar el número de colaboraciones que un autor tiene, como también el cálculo de ciertas métricas dentro de la red: Grado de
+                        Centralidad, Centralidad de Intermediación y Centralidad de Cercanía para medir la influencia del mismo. Se extrae un conjunto “N” de publicaciones para construir relaciones entre los autores(colaboraciones), aquellos autores que
+                        han colaborado entre sí en diferentes publicaciones.</p>
+                    <br>
+                    <p align="justify">La Red De Publicaciones es formada a través de un dato de tipo abstracto denominado “Grafo” que básicamente es un objeto geométrico, aunque en realidad sea un objeto combinatorio, es decir, un conjunto de nodos y un conjunto de aristas
+                        que unen cada par de vértices; en la red de autores los nodos representan los autores y las aristas representan las colaboraciones entre un par de autores. La Red cuenta con 19,948 autores y 46,068 colaboraciones construidas a
+                        partir de aproximadamente un conjunto de 30,000 publicaciones extraídas de la página web de UTDallas, utilizando algoritmos escritos en Java para buscar en el sitio web diferentes publicaciones mediante técnicas de “Crawler” y
+                        posteriormente haciendo un análisis del código HTML mediante la librería de Java JSoup para poder extraer la información de cada una de las publicaciones.</p>
+                    <br>
+                    <p align="justify">Una vez que la red se ha definido con la relación: Autor “1”, Autor “2”, Número de colaboraciones entre sí, el Grado de cada autor representaría el número de colaboraciones totales que cada uno posee. Se procede a formar la red utilizando
+                        la herramienta de software Cytoscape; luego se hace un análisis de la red para determinar las centralidades de cada uno de los nodos. 20 Con el análisis de cada uno de los nodos, el resultado del top 40 de cada centralidad es comparado
+                        con el índice-h que AMiner, Google Scholar y Web Of Science posean actualmente de cada autor; siendo el orden por centralidades: Grado, Cercanía e Intermediación. Finalmente se hace una intersección de todas las centralidades y
+                        nuevamente es comparado con el índice-h.</p>
+                    <br>
+                    <p align="justify"><strong>La red de coautorías fue creada bajo el proceso:</strong></p>
+                    <br>
+                    <p align="justify">
+                        <ul>
+                            <li>Dada una lista de publicaciones se obtienen los autores de las mismas, estos autores se trasladan a otra lista llamada Autores.</li>
+                            <li>Al poseer todos los autores en una lista solo de autores, se inicia una búsqueda de relaciones en las publicaciones, por cada autor de la lista y se crean las relaciones entre cada autor.</li>
+                            <li>Si existe una relación que se repite significa que los autores poseen más de una colaboración y de esta manera se crea la relación Autor 1, Autor 2, Número de colaboraciones.</li>
+                            <li>Una vez establecidas las relaciones se procede a crear la Red y hacer el análisis utilizando el software Cytoscape.</li>
+                        </ul>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="conclusion">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Conclusión</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 ">
+                    <p align="justify"><strong><span class="capital">1</span></strong> Se construyó una métrica que permite evaluar a los autores considerando su aspecto colaborativo e individual. El D&A índice considera la centralidad de cercanía, intermediación y grado,
+                        haciendo una sumatoria de estas, considerando que la centralidad de grado se divide por la cantidad de colaboraciones totales dentro de la red generando así, un promedio colaborativo del autor. Al final se realiza una normalización
+                        para representar la importancia del autor entre un 0 y 1 donde 1 es el valor de más prestigio.</p>
+                </div>
+                <div class="col-lg-6 ">
+                    <p align="justify"><strong><span class="capital">2</span></strong> Efectivamente se aplicó la teoría de grafos centrado en la aplicabilidad de las centralidades de cercanía, intermediación, grado y Bonacich para realizar los diferentes análisis dentro
+                        de la red de coautorías, lo que permitió descubrir factores importantes e interesantes de cada autor. La centralidad de Cercanía identifica la distancia relativa de un autor hacia los demás autores permitiendo así clasificar al
+                        autor por su cercanía hacía una red específica de autores en un campo puntual de investigación. La centralidad de Intermediación refleja la importancia de conectividad que un autor posee y el papel que juega en la propagación de
+                        la información dentro de la red. La centralidad de Grado permite identificar a los autores en su factor colaborativo y la centralidad de Bonacich permite identificar en qué entorno colaborativo o no se desenvuelve un determinado
+                        autor.
+                    </p>
+                </div>
+                <div class="col-lg-6 ">
+                    <p align="justify"><strong><span class="capital">3</span></strong> Se identificaron autores que resultan ser importantes en la comunidad científica, se tomó como referencia el índice h que es uno de los índices de mayor prestigio a nivel global. Los
+                        resultados se acercaron hasta un 60% lo que indica que: aunque no exista una relación directa entre los índices, ambos logran clasificar autores importantes.</p>
+                </div>
+                <div class="col-lg-6 ">
+                    <p align="justify"><strong><span class="capital">4</span></strong> Aplicando la centralidad de Grado se obtuvieron los autores más colaborativos dentro de la red, aquellos autores que poseen más relaciones directas con otros autores. Aplicando la centralidad
+                        de Bonacich se identificaron autores y colaborativos y en qué ambiente colaborativo se desenvuelven, tomando en cuenta las relaciones directas e indirectas de los autores.</p>
+                </div>
+                <div class="col-lg-6 ">
+                    <p align="justify"> <strong><span class="capital">5</span></strong> El factor K representado como el peso de la arista o relación entre autores, influye en el análisis debido a que en las centralidades se consideran los caminos más cortos entre los autores
+                        este camino es presentado por el escalar K, entre mayor sea el factor K la distancia será menor entre los autores y se reduce ya que se calcula el inverso (1/K).</p>
+                </div>
+
+            </div>
+    </section>
+
+
 
 
     <!-- Portfolio Grid Section -->
@@ -183,56 +337,6 @@
                             </div>
                         </div>
                         <img src="img/portfolio/cabin.png" class="img-responsive" alt="Cabin">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/cake.png" class="img-responsive" alt="Slice of cake">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/circus.png" class="img-responsive" alt="Circus tent">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/game.png" class="img-responsive" alt="Game controller">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/safe.png" class="img-responsive" alt="Safe">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/submarine.png" class="img-responsive" alt="Submarine">
                     </a>
                 </div>
             </div>

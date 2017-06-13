@@ -7,6 +7,23 @@
     background: #02577a;
 }
 
+.footer-above {
+    background: #02577a;
+}
+
+.footer-below {
+    background-color: #01303f;
+}
+
+footer {
+    background-color: #01303f;
+}
+
+.capital {
+    font-size: 2em;
+    color: #01303f;
+}
+
 header {
     background-color: #01303f;
 }
@@ -37,4 +54,9 @@ hr.science:after {
 
 .rounded {
     border-radius: 50%;
+}
+
+.imgText {
+    font-size: 1em;
+    text-align: center;
 }
