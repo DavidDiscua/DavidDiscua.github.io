@@ -20,16 +20,16 @@
 </head>
 
 <body id="page-top" class="index">
-    <div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
+    <div id="skipnav"><a href="#maincontent">Main content</a></div>
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container">
             <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navMain">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="#page-top">RED DE PUBLICACIONES</a>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="navMain">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
                         <a href="#page-top"></a>
@@ -40,12 +40,23 @@
                     <li class="page-scroll">
                         <a href="#resumen">Resumen</a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#marcoteorico">Maco Teórico</a>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" data-target="#proceso" href="#">Proceso
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="page-scroll">
+                                <a href="#marcoteorico">Marco Teórico</a>
+                            </li>
+                            <li class="page-scroll">
+                                <a href="#metodologia">Metodología</a>
+                            </li>
+                            <li class="page-scroll">
+                                <a href="#analisis">Análisis</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#metodologia">Metodología</a>
-                    </li>
+
                     <li class="page-scroll">
                         <a href="#conclusion">Conclusion</a>
                     </li>
@@ -271,12 +282,59 @@
                             <li>Una vez establecidas las relaciones se procede a crear la Red y hacer el análisis utilizando el software Cytoscape.</li>
                         </ul>
                     </p>
-
+                    <br>
+                    <p align="justify"><strong>Una colaboración entre autores</strong></p>
+                    <br>
+                    <p align="justify">Este enfoque considera que solo existe una colaboración entre los autores que posean relación, no considera si existen más relaciones o colaboraciones entre los autores. De esta manera la distancia entre cada par de vértices que representan
+                        los autores es igual a 1.</p>
+                    <br>
+                    <p align="justify"><strong>Número de colaboraciones dentro de la red de coautorías</strong></p>
+                    <br>
+                    <p align="justify">Este enfoque considera el número de colaboraciones existentes entre un par de autores dentro del conjunto de publicaciones. De tal forma que la colaboración resulta ser el inverso para poder acortar las distancias entre los autores.
+                        La Ecuación 5 muestra cómo se calcula esta métrica.</p>
+                    <br>
+                    <center>
+                        <img class="img-responsive imgText" src="img/ecuacion5.jpg" alt="Red de publicaciones">
+                        <br>
+                    </center>
+                    <br>
+                    <p align="justify">Donde : NC es la sumatoria de todas las colaboraciones entre el par de autores.</p>
+                    <br>
+                    <p align="justify"><strong>Número de colaboraciones internacionales entre los autores</strong></p>
+                    <br>
+                    <p align="justify">Este enfoque considera el número de colaboraciones existentes entre un par de autores con la característica de que si la colaboración es con un autor internacional esta tiene el doble de valor. Para poder determinar este tipo de relación
+                        fue necesario crear un programa en Java que hiciera peticiones por medio de SOAP a los servidores de Thomson Reuters para obtener la afiliación de cada uno de los autores. La Ecuación 6 muestra el cálculo de esta métrica.</p>
+                    <br>
+                    <center>
+                        <img class="img-responsive imgText" src="img/ecuacion6.jpg" alt="Red de publicaciones">
+                        <br>
+                    </center>
+                    <br>
+                    <p align="justify"> Donde:
+                        <br><br> NCI es la sumatoria de todas las colaboraciones entre el par de autores, internacional y no internacional. Este valor no puede ser 0 debido a que solo se construyen relaciones entre autores que posean colaboraciones, es
+                        decir que debe existir al menos una colaboración para establecer la relación.
+                        <br><br> Ln representa el logaritmo natural.
+                    </p>
+                    <br>
                 </div>
             </div>
         </div>
     </section>
 
+    <section id="analisis">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Análisis y Resultados</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+
+
+            </div>
+        </div>
+    </section>
 
     <section id="conclusion">
         <div class="container">

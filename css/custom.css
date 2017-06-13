@@ -7,15 +7,11 @@
     background: #02577a;
 }
 
-.footer-above {
+footer .footer-above {
     background: #02577a;
 }
 
-.footer-below {
-    background-color: #01303f;
-}
-
-footer {
+footer .footer-below {
     background-color: #01303f;
 }
 
@@ -59,4 +55,9 @@ hr.science:after {
 .imgText {
     font-size: 1em;
     text-align: center;
+}
+
+.dropdown-menu {
+    background: #18BC9C;
+    color: #18BC9C;
 }
