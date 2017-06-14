@@ -54,6 +54,9 @@
                             <li class="page-scroll">
                                 <a href="#analisis">Análisis</a>
                             </li>
+                            <li class="page-scroll">
+                                <a href="#metrica">Propuesta de métrica</a>
+                            </li>
                         </ul>
                     </li>
 
@@ -330,11 +333,136 @@
                 </div>
             </div>
             <div class="row">
+                <p align="justify">De cada análisis por centralidad se extrajeron los primeros 40 autores con mayor valor en cada categoría, luego estos resultados se comparan con las citas y el índice-h que los autores posean actualmente. A continuación se detalla un ejemplo
+                    de uno de los análisis desde un enfoque. Para resumir , se omitiran los demás y se pasará al resultado final del análisis.
+                </p>
+                <br>
+                <strong><p align="justify">Análisis una colaboración entre autores</p></strong>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/analisis/1/cercania.png" class="img-responsive minSize" alt="Cabin">
+                    </a>
+                    <center>
+                        <p align="justify">Centralidad de Cercanía</p>
+                    </center>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/analisis/1/intermediacion.png" class="img-responsive minSize" alt="Cabin">
+                    </a>
+                    <center>
+                        <p align="justify">Centralidad de Intermediación</p>
+                    </center>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/analisis/1/grado.png" class="img-responsive minSize" alt="Cabin">
+                    </a>
+                    <center>
+                        <p align="justify">Centralidad de Grado</p>
+                    </center>
+                </div>
+            </div>
 
-
+            <div class="row">
+                <br>
+                <br>
+                <strong><p align="justify">Resultado del análisis con las centralidades</p></strong>
+                <br>
+                <p align="justify">Todas las centralidades aplicadas para realizar los análisis en los diferentes enfoques ofrecen resultados de precisión y especificidad similares, se alcanza un máximo de 70% para precisión y 67% para especificidad con la centralidad de
+                    Bonacich, sin embargo, cada centralidad representa una característica distinta en cada autor.</p>
+                <br>
+                <br>
+                <p align="justify">La centralidad de cercanía refleja la distancia relativa que un autor tiene respecto al resto del conjunto de autores, lo que permite determinar la cercanía de un autor en una red de autores específica, por ejemplo: autores de publicaciones
+                    sobre administración, negocios, informática etc. De esta manera se puede clasificar a los autores en su sentido de cercanía con la comunidad científica de manera general y específica en algún campo de estudio.</p>
+                <br>
+                <br>
+                <p align="justify">La centralidad de intermediación permite determinar la importancia de conectividad que un autor posee, permitiendo así identificar aquellos autores que sean de suma importancia para el flujo de información dentro de la red. Mediante esta
+                    centralidad se podría generar una clasificación de autores en una red específica o general obteniendo así los ejes principales para la propagación del conocimiento.</p>
+                <br>
+                <br>
+                <p align="justify">La centralidad de grado determina el factor colaborativo de un autor, qué tan abierto a colaboraciones un autor resulta ser. Es importante identificar este tipo de autores para el desarrollo de colaboraciones científicas que permiten grandes
+                    avances investigativos en diversos temas.</p>
+                <br>
+                <br>
+                <p align="justify">La centralidad de Bonacich permite identificar el entorno colaborativo en el que un autor se desenvuelve ya que considera el factor colaborativo individual de los autores con los cuales tiene una relación directa. Esta centralidad es importante
+                    para generar una clasificación de los autores por entorno; generando una relación selectiva o no de los autores entre sí.</p>
+                <br>
+                <br>
+                <p align="justify">La aplicación de las centralidades en el análisis de redes permite identificar diferentes características importantes en los autores, por ende, es posible generar una métrica que involucre las diferentes características que cada una de
+                    las centralidades provee para clasificar a los autores tanto en factor colaborativo como individual.</p>
             </div>
         </div>
     </section>
+
+    <section id="metrica">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Propuesta de Métrica</h2>
+                    <hr class="star-light">
+                </div>
+                <div class="row">
+                    <p align="justify">La métrica <strong>D&A-índice</strong> tiene como propósito principal generar un complemento para algunas de las métricas existentes. Esta considera tanto el factor individual como también el factor colaborativo de los autores llegando
+                        a tener similitudes con aquellas métricas de medición individual entre un 50% y 60%, lo cual se complementa entre un 50% y 40% de factor colaborativo de cada autor.
+                    </p>
+                    <br>
+                    <p align="justify">La Ecuación 7 muestra como calcular M que es el índice asociado al autor antes de su normalización.</p>
+                    <br>
+                    <center>
+                        <img class="img-responsive imgText" src="img/ecuacion7.jpg" alt="Red de publicaciones">
+                        <br>
+                    </center>
+                    <br>
+                    <p align="justify">
+                        Donde:
+                        <br>
+                        <ul>
+                            <li class="moreLi">M representa el valor a ser calculado previo a la normalización.</li>
+                            <li class="moreLi">cc representa la centralidad de cercanía.</li>
+                            <li class="moreLi">bc representa la centralidad de intermediación.</li>
+                            <li class="moreLi">Dc representa la centralidad de grado.</li>
+                            <li class="moreLi">Ta representa el número total de colaboraciones dentro de la red.</li>
+                        </ul>
+                    </p>
+                    <br>
+                    <br>
+                    <p align="justify">La Ecuación 8 muestra el cálculo del índice D&A después de la normalización de los datos. La fórmula general un valor entre 0 y 1 donde 0 representa el valor de menos prestigio y 1 el de mayor prestigio dentro de la red de coautorías.</p>
+                    <br>
+                    <center>
+                        <img class="img-responsive imgText" src="img/ecuacion8.jpg" alt="Red de publicaciones">
+                        <br>
+                    </center>
+                    <br>
+                    <p align="justify">
+                        Donde:
+                        <br>
+                        <ul>
+                            <li class="moreLi">DA es el valor a ser calculado el índice D&A.</li>
+                            <li class="moreLi">Mi representa el valor previo a la normalización asociado a cada autor.</li>
+                            <li class="moreLi">Mmin representa el valor M menor.</li>
+                            <li class="moreLi">Mmax representa el valor M máximo.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>1
 
     <section id="conclusion">
         <div class="container">
@@ -384,7 +512,7 @@
                 </div>
             </div>
             <div class="row">
-                <p text-align="justify">
+                <p align="justify">
                     <ul>
                         <li class="moreLi">Junker, B. H., & Schreiber, F. (2008). Undirected,Directed,Mixed and Multigraphs. In Analysis of Biological Networks (pp. 19-20). Wiley. Obtenido en Enero 18, 2017</li>
                         <li class="moreLi">Aminer. (2017). Obtenido en Enero 18, 2017, de aminer.org: https://aminer.org/</li>
@@ -423,29 +551,6 @@
         </div>
     </section>
 
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Portfolio</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/cabin.png" class="img-responsive" alt="Cabin">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- About Section -->
     <section class="success" id="about">
@@ -485,19 +590,7 @@
                         <h3>Around the Web</h3>
                         <ul class="list-inline">
                             <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Google Plus</span><i class="fa fa-fw fa-google-plus"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Twitter</span><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                            <li>
                                 <a href="#" class="btn-social btn-outline"><span class="sr-only">Linked In</span><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Dribble</span><i class="fa fa-fw fa-dribbble"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -539,26 +632,88 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
+                            <center>
+                                <h2>Centralidad de Cercanía</h2>
+                            </center>
                             <hr class="star-primary">
-                            <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or
-                                you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <img src="img/analisis/1/cercania.png" class="img-responsive img-centered" alt="">
+                            <p align="justify">Al final del análisis el valor más alto lo posee Rajiv Banker seguido por Kannan Srinivasan con una diferencia del 0.3%. La diferencia entre el primero y último puesto es de 5%, es decir que no existen grandes diferencias entre
+                                los autores del top 40 de Centralidad de Cercanía. Al compararlo con las estadísticas de AMiner, Google Scholar y Web Of Science los autores poseen en su mayoría citas significativas, pero no corresponden directamente a
+                                la posición por Centralidad de Cercanía.
+                                <br><br> El análisis de precisión indica que, para muestras de 5, 10, 15, 20 autores se obtiene una precisión del 20%, 30%, 46.47%, 60% respectivamente, a medida esta muestra aumenta tiende a tener un comportamiento de
+                                mayor precisión. El resultado de la especificidad indica que, para muestras de 5, 10, 15, 20 autores se obtiene una precisión del 20%, 30%, 43.75%, 60% respectivamente. y la especificidad poseen valores muy parecidos.</p>
+                            <img src="img/analisis/1/p1.png" class="img-responsive img-centered" alt="">
+                            <p align="justify">Existe una relación entre la centralidad de Cercanía y la importancia que el índice-h refleja de cada autor, sin embargo, esta no es del todo precisa, a medida la muestra aumenta la precisión tiende a acercarse más al índice-h.
+                            </p>
+                            <center> <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Cerrar</button></center>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <center>
+                                <h2>Centralidad de Intermediación</h2>
+                            </center>
+                            <hr class="star-primary">
+                            <img src="img/analisis/1/intermediacion.png" class="img-responsive img-centered" alt="">
+                            <p align="justify">Al final del análisis el valor más alto lo posee Rajiv Banker seguido por Kannan Srinivasan con una diferencia del 0.3%. La diferencia entre el primero y último puesto es de 5%, es decir que no existen grandes diferencias entre
+                                los autores del top 40 de Centralidad de Cercanía. Al compararlo con las estadísticas de AMiner, Google Scholar y Web Of Science los autores poseen en su mayoría citas significativas, pero no corresponden directamente a
+                                la posición por Centralidad de Cercanía.
+                                <br><br> El análisis de precisión indica que, para muestras de 5, 10, 15, 20 autores se obtiene una precisión del 20%, 30%, 46.47%, 60% respectivamente, a medida esta muestra aumenta tiende a tener un comportamiento de
+                                mayor precisión. El resultado de la especificidad indica que, para muestras de 5, 10, 15, 20 autores se obtiene una precisión del 20%, 30%, 43.75%, 60% respectivamente. y la especificidad poseen valores muy parecidos.</p>
+                            <img src="img/analisis/1/p2.png" class="img-responsive img-centered" alt="">
+                            <p align="justify">Existe una relación entre la centralidad de Cercanía y la importancia que el índice-h refleja de cada autor, sin embargo, esta no es del todo precisa, a medida la muestra aumenta la precisión tiende a acercarse más al índice-h.
+                            </p>
+                            <center> <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Cerrar</button></center>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <center>
+                                <h2>Centralidad de Grado</h2>
+                            </center>
+                            <hr class="star-primary">
+                            <img src="img/analisis/1/grado.png" class="img-responsive img-centered" alt="">
+                            <p align="justify">Al final del análisis el valor más alto lo posee Rajiv Banker seguido por Kannan Srinivasan con una diferencia del 0.3%. La diferencia entre el primero y último puesto es de 5%, es decir que no existen grandes diferencias entre
+                                los autores del top 40 de Centralidad de Cercanía. Al compararlo con las estadísticas de AMiner, Google Scholar y Web Of Science los autores poseen en su mayoría citas significativas, pero no corresponden directamente a
+                                la posición por Centralidad de Cercanía.
+                                <br><br> El análisis de precisión indica que, para muestras de 5, 10, 15, 20 autores se obtiene una precisión del 20%, 30%, 46.47%, 60% respectivamente, a medida esta muestra aumenta tiende a tener un comportamiento de
+                                mayor precisión. El resultado de la especificidad indica que, para muestras de 5, 10, 15, 20 autores se obtiene una precisión del 20%, 30%, 43.75%, 60% respectivamente. y la especificidad poseen valores muy parecidos.</p>
+                            <img src="img/analisis/1/p3.png" class="img-responsive img-centered" alt="">
+                            <p align="justify">Existe una relación entre la centralidad de Cercanía y la importancia que el índice-h refleja de cada autor, sin embargo, esta no es del todo precisa, a medida la muestra aumenta la precisión tiende a acercarse más al índice-h.
+                            </p>
+                            <center> <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Cerrar</button></center>
+
                         </div>
                     </div>
                 </div>

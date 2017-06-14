@@ -65,3 +65,22 @@ hr.science:after {
 .moreLi {
     font-size: 1.2em;
 }
+
+#referencias {
+    background-color: #01303f;
+    color: #fff;
+}
+
+#resumen {
+    background-color: #ecf0f1;
+}
+
+#analisis {
+    background-color: #ecf0f1;
+}
+
+.modal-body {
+    text-align: justify;
+}
+
+.minSize {}
